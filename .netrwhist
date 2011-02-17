@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/merstzik/www/ck_task/public/images'
+let g:netrw_dirhist_2='/home/merstzik/www/ck_task/public/images/people'
+let g:netrw_dirhist_3='/home/merstzik/www/ck_task/app'
+let g:netrw_dirhist_4='/home/merstzik/www/ck_task/app/helpers'
+let g:netrw_dirhist_5='/home/merstzik/www/ck_task/public/images/people'
+let g:netrw_dirhist_6='/home/merstzik/.ssh'
+let g:netrw_dirhist_7='/home/merstzik/www/ck_task/log'
