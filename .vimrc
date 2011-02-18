@@ -2,10 +2,13 @@
 set nocompatible
 syntax on
 
-" my preferable color scheme
+" my preferable color scheme for rails
 " colorscheme vividchalk
 colorscheme ir_black
 
+" enabling pathogen plugin (autoload)
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " I've added this for Rails support
 filetype plugin indent on
