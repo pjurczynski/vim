@@ -2,6 +2,11 @@
 set nocompatible
 syntax on
 
+" my preferable color scheme
+" colorscheme vividchalk
+colorscheme ir_black
+
+
 " I've added this for Rails support
 filetype plugin indent on
 
