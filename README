@@ -1,0 +1,2 @@
+just extract to your home directory and add symbolic link to ~/.vim/.vimrc
+"ln -s ~/.vim/.vimrc ~/.vimrc"
