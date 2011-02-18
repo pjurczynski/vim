@@ -1,1 +1,0 @@
-RltvNmbr.vba: call delete('/home/merstzik/.vim/plugin/RltvNmbrPlugin.vim')|call delete('/home/merstzik/.vim/doc/RltvNmbr.txt')|call delete('/home/merstzik/.vim/autoload/RltvNmbr.vim')
