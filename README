@@ -1,15 +1,13 @@
 All your plugins are stored in .vim/bundle directory thanks to pathogen plugin
 
-just extract to your home directory and add symbolic link to:
-~/.vim/.vimrc
-"ln -s ~/.vim/.vimrc ~/.vimrc"
-and gvim
-~/.vim/gvimrc
-"ln -s ~/.vim/gvimrc ~/.gvimrc"
+just extract to your home directory and add symbolic link:
+	ln -s ~/.vim/vimrc ~/.vimrc
+	ln -s ~/.vim/gvimrc ~/.gvimrc
 
-to add new plugin to the repository use submodule ex.
-git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+to add new plugin to the repository use submodule 
+ex. 
+	git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 
-then in this plugin to be installed directory write a command:
-git submodule init
-git submodule update
+to initiate plugin and pull it from server use
+	git submodule init
+	git submodule update
