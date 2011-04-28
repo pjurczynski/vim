@@ -1,3 +1,7 @@
+"===================================="
+"             GLOBALS                "
+"===================================="
+
 " set nocompatible with vi
 set nocompatible
 syntax on
@@ -6,23 +10,20 @@ syntax on
 " colorscheme vividchalk
 colorscheme ir_black
 
-" enabling pathogen plugin (autoload)
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" changing status line like Derek Wyatt
+set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n
+
+" always leave status line
+set laststatus=2
+
+" have command line of two lines high
+set ch=2
 
 " I've added this for Rails support
 filetype plugin indent on
 
 " Load matchit (% to bounce from do to end, etc.)
 runtime! macros/matchit.vim
-
-" special indentation for rails
-augroup myfiletypes
-	" Clear old autocmds in group
-	autocmd!
-	"autoindent with two spaces, always expand tabs
-	autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
-augroup END
 
 " show last status 2
 set laststatus=2
@@ -54,9 +55,8 @@ set number
 set foldenable
 set foldmethod=syntax
 
-" some filetypes:
-au! BufRead,BufNewFile *.sass         setfiletype sass 
-au! BufRead,BufNewFile *.scss         setfiletype scss 
+" always keep visible 8 lines below and above
+set scrolloff=8
 
 " split buffers more logically
 set splitbelow
@@ -64,6 +64,37 @@ set splitright
 
 " changes the default leader to coma
 let mapleader = ","
+
+"===================================="
+"             PLUGINS                "
+"===================================="
+
+" enabling pathogen plugin (autoload)
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+"===================================="
+"             AUTOCMDs               "
+"===================================="
+
+" some filetypes:
+au! BufRead,BufNewFile *.sass         setfiletype sass 
+au! BufRead,BufNewFile *.scss         setfiletype scss 
+
+" special indentation for rails
+augroup myfiletypes
+	" Clear old autocmds in group
+	autocmd!
+	"autoindent with two spaces, always expand tabs
+	autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+augroup END
+
+" reload .vimrc every time you save it
+autocmd bufwritepost .vimrc source ~/.vimrc
+
+"===================================="
+"             MAPPING                "
+"===================================="
 
 " remap default keys of 'j' and 'k'
 map j gj
@@ -97,8 +128,5 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" reload .vimrc every time you save it
-autocmd bufwritepost .vimrc source ~/.vimrc
 
 
