@@ -9,3 +9,7 @@ and gvim
 
 to add new plugin to the repository use submodule ex.
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+
+then in this plugin to be installed directory write a command:
+git submodule init
+git submodule update
