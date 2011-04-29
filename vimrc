@@ -8,7 +8,9 @@ syntax on
 
 " my preferable color scheme for rails
 " colorscheme vividchalk
-colorscheme ir_black
+" colorscheme ir_black
+set background=light
+colorscheme solarized
 
 " changing status line like Derek Wyatt
 set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n
