@@ -50,6 +50,9 @@ filetype plugin indent on
 " indents equals 4 spaces
 set tabstop=2
 
+"set blinking on matching brackets
+set mat=5
+
 " autoindets tabs
 set shiftwidth=2
 
@@ -77,6 +80,9 @@ let mapleader = ","
 " enabling pathogen plugin (autoload)
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+" Add recently accessed projects menu (project plugin)
+set viminfo^=!
 
 "===================================="
 "             AUTOCMDs               "
