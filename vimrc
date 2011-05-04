@@ -31,6 +31,9 @@ set laststatus=2
 " shows all commands
 set showcmd
 
+" show a mode in which you currently are
+set showmode
+
 " Expand the command line using tab
 set wildchar=<Tab>
 
