@@ -73,6 +73,11 @@ set splitright
 " changes the default leader to coma
 let mapleader = ","
 
+" hide scrollbars and menus
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+
 "===================================="
 "             PLUGINS                "
 "===================================="
@@ -115,24 +120,24 @@ map k gk
 imap jj <ESC>
 
 " remap keys in insert mode to make html entites for polish letters
-imap Ą &#260;
-imap ą &#261;
-imap Ć &#262;
-imap ć &#263;
-imap Ę &#280;
-imap ę &#281;
-imap Ł &#321;
-imap ł &#322;
-imap Ń &#323;
-imap ń &#324;
-imap Ó &#211;
-imap ó &#243;
-imap Ś &#346;
-imap ś &#347;
-imap Ź &#377;
-imap ź &#378;
-imap Ż &#379;
-imap ż &#380;
+" imap Ą &#260;
+" imap ą &#261;
+" imap Ć &#262;
+" imap ć &#263;
+" imap Ę &#280;
+" imap ę &#281;
+" imap Ł &#321;
+" imap ł &#322;
+" imap Ń &#323;
+" imap ń &#324;
+" imap Ó &#211;
+" imap ó &#243;
+" imap Ś &#346;
+" imap ś &#347;
+" imap Ź &#377;
+" imap ź &#378;
+" imap Ż &#379;
+" imap ż &#380;
 
 " mappings for editing files relativley to the current open file
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
